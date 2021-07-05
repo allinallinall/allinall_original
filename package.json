@@ -1,0 +1,11 @@
+{
+  "name": "allinall",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/allinallinall/allinall.git",
+  "author": "allinall <allinallinall@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
+}
