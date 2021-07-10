@@ -10,11 +10,17 @@
   </head>
   <body>
     <div class="container">
-      <label id="bet-size-input-boxes">
-        Bet <input id="bet-size-input-box" type="number">
-        Pot <input id="pot-size-input-box" type="number">
-      </label>
-      <p></p>
+      <div class="input-group">
+        <input type="number" placeholder= "Bet Size" class="form-control">
+        <input type="number" placeholder= "Pot Size" class="form-control">
+        <button id="calc-button" class="btn btn-outline-dark">Calc</button>
+      </div>
+      <!-- <div class="input-betsize-potsize-field">
+        <span class="input-betsize-potsize-field"></span>
+        <input type="number" placeholder="Bet Size" class="form-control">
+        <input type="number" placeholder="Pot Size" class="form-control">
+        <button id="calc-button" class="btn btn-outline-dark">Calc</button>
+      </div> -->
       <input id="bet-slider" type="range" class="form-range" min="0" max="100" step="0.1">
       <div class="betsize-buttons">
         <button id="b20" class="btn btn-outline-dark">20%</button>

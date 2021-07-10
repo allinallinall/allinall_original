@@ -7,13 +7,23 @@ input[type="range"] {
   height: 3rem;
 }
 
+.input-group {
+  width: 725px;
+  margin-block: 2em;
+}
+
+.form-control {
+  width: 300px;
+  text-align: center;
+}
+
 .form-range {
   height: 4rem;
 }
 
 #bet-size-input-box, #pot-size-input-box {
   width: 200px;
-  height: 2rem;
+  height: 2.4rem;
   text-align: center;
   margin-block: 2em;
 }
