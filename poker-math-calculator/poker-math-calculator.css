@@ -1,0 +1,23 @@
+input[type="range"] {
+  width: 725px;
+}
+
+.betsize-buttons button {
+  width: 100px;
+  height: 3rem;
+}
+
+.form-range {
+  height: 4rem;
+}
+
+#bet-size-input-box, #pot-size-input-box {
+  width: 200px;
+  height: 2rem;
+  text-align: center;
+  margin-block: 2em;
+}
+
+#bet-size-input-boxes {
+  align-items: center;
+}
