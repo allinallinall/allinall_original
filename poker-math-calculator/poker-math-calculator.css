@@ -1,3 +1,9 @@
+.card {
+  display: inline-block;
+  width: 238px;
+  text-align: center;
+}
+
 input[type="range"] {
   width: 725px;
 }
