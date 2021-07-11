@@ -1,0 +1,1 @@
+Have the betslider change the betsize after entry
