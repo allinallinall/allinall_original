@@ -1,3 +1,6 @@
+let $container = document.querySelector(".container");
+let $vanillaButton = document.querySelector("#vanilla-button");
+let $cssButton = document.querySelector("#css-button");
 let $calcButton = document.querySelector("#calc-button");
 let $betSize = document.querySelector("#bet-size-input-box");
 let $potSize = document.querySelector("#pot-size-input-box");
@@ -12,6 +15,7 @@ let $bet50 = document.querySelector("#b50");
 let $bet67 = document.querySelector("#b67");
 let $bet75 = document.querySelector("#b75");
 let $bet100 = document.querySelector("#b100");
+
 
 function toPercentageDisplayFormat(number) {
   return number.toPrecision(4)+"%";
@@ -28,6 +32,15 @@ function getMinDefenseFreq(betSizePercentage) {
 function getBetSize(potSize, betSizePercentage) {
   return potSize*(betSizePercentage/100);
 }
+
+$vanillaButton.addEventListener("click", function () {
+  $container.classList.remove("styled");
+});
+
+$cssButton.addEventListener("click", function () {
+  $container.classList.add("styled");
+});
+
 
 $calcButton.addEventListener("click", function () {
   let betSize = Number($betSize.value);
@@ -53,6 +66,9 @@ $betSlider.addEventListener("change", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(betSizePercentage, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = betSizePercentage;
   }
 });
 
@@ -64,6 +80,9 @@ $bet20.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(20, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 20;
   }
 });
 
@@ -75,6 +94,9 @@ $bet25.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(25, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 25;
   }
 });
 
@@ -86,6 +108,9 @@ $bet33.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(33.33, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 33.3;
   }
 });
 
@@ -97,9 +122,12 @@ $bet50.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(50, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 50;
   }
-
 });
+
 $bet67.addEventListener("click", function () {
   $betSlider.value = 66.67;
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
@@ -108,6 +136,9 @@ $bet67.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(66.67, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 66.7;
   }
 });
 
@@ -119,9 +150,12 @@ $bet75.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(75, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 75;
   }
-
 });
+
 $bet100.addEventListener("click", function () {
   $betSlider.value = 100;
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
@@ -130,6 +164,8 @@ $bet100.addEventListener("click", function () {
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(100, Number($potSize.value)).toPrecision(4);
+  } else {
+    $potSize.value = 100;
+    $betSize.value = 100;
   }
-
 });

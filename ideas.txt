@@ -1,1 +1,5 @@
-Have the betslider change the betsize after entry
+- Toggle NL/PLO (shift/modifier)
+  - betsize options
+  - outs per street
+    - rule of 2 and 4?
+- 4bet pots math in PLO
