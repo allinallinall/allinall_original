@@ -10,7 +10,7 @@
 
 .styled .betsize-buttons button {
   width: 110px;
-  height: 3rem;
+  height: 3.5rem;
 }
 
 .styled .btn-outline-dark {
@@ -20,7 +20,7 @@
 .styled .input-group {
   width: 800px;
   border: 10px;
-  margin-block: 3em;
+  margin-block: 5em;
 }
 
 .styled .form-control {
@@ -29,6 +29,6 @@
 }
 
 .styled .form-range {
-  height: 4rem;
+  height: 6rem;
   margin: auto;
 }

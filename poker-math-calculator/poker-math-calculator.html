@@ -11,7 +11,7 @@
   <body>
 
       <div class="container styled">
-    
+
         <div class="input-group">
           <input id="bet-size-input-box" type="number" placeholder= "Enter Bet Size" class="form-control">
           <input id="pot-size-input-box" type="number" placeholder= "Enter Pot Size" class="form-control">
@@ -19,21 +19,27 @@
         </div>
         <div class="card">
           <ul class="list-group list-group-flush">
+            <div class="card-header">Bet Size</div>
             <li id="bet-size-percentage-box" class="list-group-item">&nbsp;</li>
           </ul>
-          <div class="card-footer">Bet Size</div>
+            <div class="card-header">Odds</div>
+          <li id="odds-box" class="list-group-item">&nbsp; </li>
         </div>
         <div class="card">
           <ul class="list-group list-group-flush">
+            <div class="card-header">Equity Required</div>
             <li id="equity-required-box" class="list-group-item">&nbsp;</li>
           </ul>
-          <div class="card-footer">Equity Required</div>
+          <div class="card-header">Outs Required</div>
+          <li id="outs-required-box" class="list-group-item">&nbsp; </li>
         </div>
         <div class="card">
           <ul class="list-group list-group-flush">
+            <div class="card-header">Minimum Defense %</div>
             <li id="min-defense-freq-box" class="list-group-item">&nbsp;</li>
           </ul>
-          <div class="card-footer">Minimum Defense %</div>
+          <div class="card-header">Alpha (Auto Profit)</div>
+          <li id="alpha-auto-profit-box" class="list-group-item">&nbsp;</li>
         </div>
         <input id="bet-slider" type="range" class="form-range" min="0" max="100" step="0.1">
         <div class="betsize-buttons">
