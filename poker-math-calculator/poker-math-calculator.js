@@ -33,16 +33,7 @@ function getBetSize(potSize, betSizePercentage) {
   return potSize*(betSizePercentage/100);
 }
 
-$vanillaButton.addEventListener("click", function () {
-  $container.classList.remove("styled");
-});
-
-$cssButton.addEventListener("click", function () {
-  $container.classList.add("styled");
-});
-
-
-$calcButton.addEventListener("click", function () {
+function calculate() {
   let betSize = Number($betSize.value);
   let potSize = Number($potSize.value);
   let betSizePercentage = ((betSize/potSize)*100);
@@ -54,7 +45,22 @@ $calcButton.addEventListener("click", function () {
   $betSizePercentageBox.innerHTML = toPercentageDisplayFormat(betSizePercentage);
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(equityRequiredPercentage);
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(minDefenseFreqPercentage);
+}
+
+$betSize.addEventListener("keypress", function (event) {
+  if (event.keyCode == 13) {
+    calculate();
+  }
 });
+
+$potSize.addEventListener("keypress", function (event) {
+  if (event.keyCode == 13) {
+    calculate();
+  }
+});
+
+
+$calcButton.addEventListener("click", calculate);
 
 $betSlider.addEventListener("change", function () {
   let betSizePercentage = Number($betSlider.value);
