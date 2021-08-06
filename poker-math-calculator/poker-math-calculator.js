@@ -21,11 +21,15 @@ let $bet100 = document.querySelector("#b100");
 
 
 function toPercentageDisplayFormat(number) {
-  return number.toPrecision(4)+"%";
+  return number.toPrecision(3)+"%";
 }
 
 function getEquityRequiredPercentage(betSizePercentage) {
   return (betSizePercentage/(betSizePercentage+betSizePercentage+100)*100);
+}
+
+function convertEquityToOdds(betSizePercentage) {
+  return ((100/(betSizePercentage)).toPrecision(2))-1+" : "+1;
 }
 
 function getMinDefenseFreq(betSizePercentage) {
@@ -68,10 +72,17 @@ $calcButton.addEventListener("click", calculate);
 $betSlider.addEventListener("change", function () {
   let betSizePercentage = Number($betSlider.value);
   let equityRequiredPercentage = getEquityRequiredPercentage(betSizePercentage);
+  let outsRequired = 44*equityRequiredPercentage/100;
   let minDefenseFreqPercentage = getMinDefenseFreq(betSizePercentage);
+  let alphaAutoProfitPercentage = 100-(minDefenseFreqPercentage);
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(equityRequiredPercentage);
+  $outsRequiredBox.innerHTML = outsRequired.toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(minDefenseFreqPercentage);
+  $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(alphaAutoProfitPercentage);
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(betSizePercentage, Number($potSize.value)).toPrecision(4);
@@ -84,6 +95,7 @@ $betSlider.addEventListener("change", function () {
 $bet20.addEventListener("click", function () {
   $betSlider.value = 20;
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(20));
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(20));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(20)/100*44).toPrecision(2);
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(20));
@@ -99,9 +111,13 @@ $bet20.addEventListener("click", function () {
 
 $bet25.addEventListener("click", function () {
   $betSlider.value = 25;
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(25));
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(25));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(25)/100*44).toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(25));
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-getMinDefenseFreq(25));
 
@@ -115,9 +131,13 @@ $bet25.addEventListener("click", function () {
 
 $bet33.addEventListener("click", function () {
   $betSlider.value = 33.33;
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(33.33));
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(33.33));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(33.33)/100*44).toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(33.33));
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-getMinDefenseFreq(33.33));
 
@@ -131,9 +151,13 @@ $bet33.addEventListener("click", function () {
 
 $bet50.addEventListener("click", function () {
   $betSlider.value = 50;
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(50));
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(50));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(50)/100*44).toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(50));
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-getMinDefenseFreq(50));
 
@@ -147,9 +171,13 @@ $bet50.addEventListener("click", function () {
 
 $bet67.addEventListener("click", function () {
   $betSlider.value = 66.67;
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(66.67));
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(66.66));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(66.66)/100*44).toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(66.66));
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-getMinDefenseFreq(66.66));
 
@@ -163,9 +191,13 @@ $bet67.addEventListener("click", function () {
 
 $bet75.addEventListener("click", function () {
   $betSlider.value = 75;
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = ".33 : 1"
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(75));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(75)/100*44).toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(75));
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-getMinDefenseFreq(75));
 
@@ -179,9 +211,13 @@ $bet75.addEventListener("click", function () {
 
 $bet100.addEventListener("click", function () {
   $betSlider.value = 100;
+
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(100));
+
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(100));
   $outsRequiredBox.innerHTML = (getEquityRequiredPercentage(100)/100*44).toPrecision(3);
+
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(getMinDefenseFreq(100));
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-getMinDefenseFreq(100));
 
