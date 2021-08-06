@@ -77,6 +77,7 @@ $betSlider.addEventListener("change", function () {
   let alphaAutoProfitPercentage = 100-(minDefenseFreqPercentage);
 
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  $oddsBox.innerHTML = (convertEquityToOdds(betSizePercentage));
 
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(equityRequiredPercentage);
   $outsRequiredBox.innerHTML = outsRequired.toPrecision(3);
