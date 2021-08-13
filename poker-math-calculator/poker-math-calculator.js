@@ -95,13 +95,18 @@ $betSlider.addEventListener("change", function () {
   let alphaAutoProfitPercentage = 100-(minDefenseFreqPercentage);
 
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  changePercentageFilled("bet size",betSizePercentage);
   $oddsBox.innerHTML = (convertEquityToOdds(betSizePercentage));
 
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(equityRequiredPercentage);
+  changePercentageFilled("equity required",equityRequiredPercentage);
   $outsRequiredBox.innerHTML = outsRequired.toPrecision(3);
 
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(minDefenseFreqPercentage);
+  changePercentageFilled("minimum defense frequency",minDefenseFreqPercentage);
+
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(alphaAutoProfitPercentage);
+  changePercentageFilled("auto profit",alphaAutoProfitPercentage);
 
   if ($potSize.value !== "") {
     $betSize.value = getBetSize(betSizePercentage, Number($potSize.value)).toPrecision(3);
