@@ -9,16 +9,35 @@
 }
 
 .styled #bet-size-percentage-fill {
-  position: absolute;
-  background: grey;
-  opacity: .15;
-  top: 40.42px;
-  left: .5px;
-  height: 40.42px;
-  max-width: 260.76px;
-  width: 66%;
-  padding-left: 0px;
-  padding-right: 0px;
+  position: relative;
+  background: lightblue;
+  opacity: 1;
+  max-width: 261px;
+  width: 75%;
+}
+
+.styled #equity-required-percentage-fill {
+  position: relative;
+  background: lightgreen;
+  opacity: .80;
+  max-width: 261px;
+  width: 75%;
+}
+
+.styled #min-defense-percentage-fill {
+  position: relative;
+  background: orange;
+  opacity: .60;
+  max-width: 261px;
+  width: 75%;
+}
+
+.styled #auto-profit-percentage-fill {
+  position: relative;
+  background: red;
+  opacity: .60;
+  max-width: 261px;
+  width: 75%;
 }
 
 .styled input[type="range"] {
