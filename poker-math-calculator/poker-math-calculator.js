@@ -65,11 +65,15 @@ function calculate() {
   let equityRequiredPercentage = getEquityRequiredPercentage(betSizePercentage);
   let minDefenseFreqPercentage = getMinDefenseFreq(betSizePercentage);
 
-
   $betSlider.value = betSizePercentage;
   $betSizePercentageBox.innerHTML = toPercentageDisplayFormat(betSizePercentage);
+  changePercentageFilled("bet size",betSizePercentage);
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(equityRequiredPercentage);
+  changePercentageFilled("equity required",equityRequiredPercentage);
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(minDefenseFreqPercentage);
+  changePercentageFilled("minimum defense frequency",minDefenseFreqPercentage);
+  $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-(minDefenseFreqPercentage));
+
 }
 
 $betSize.addEventListener("keypress", function (event) {

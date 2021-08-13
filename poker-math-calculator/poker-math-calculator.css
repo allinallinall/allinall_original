@@ -4,16 +4,18 @@
   text-align: center;
 }
 
-.styled .list-group {
+/* .styled .list-group {
   position: relative;
-}
+} */
 
 .styled #bet-size-percentage-fill {
   position: relative;
   background: lightblue;
   opacity: 1;
   max-width: 261px;
-  width: 75%;
+  width: 0%;
+  padding-left: 0px;
+  padding-right: 5px;
 }
 
 .styled #equity-required-percentage-fill {
@@ -21,7 +23,9 @@
   background: lightgreen;
   opacity: .80;
   max-width: 261px;
-  width: 75%;
+  width: 0%;
+  padding-left: 0px;
+  padding-right: 5px;
 }
 
 .styled #min-defense-percentage-fill {
@@ -29,7 +33,9 @@
   background: orange;
   opacity: .60;
   max-width: 261px;
-  width: 75%;
+  width: 0%;
+  padding-left: 0px;
+  padding-right: 5px;
 }
 
 .styled #auto-profit-percentage-fill {
@@ -37,7 +43,9 @@
   background: red;
   opacity: .60;
   max-width: 261px;
-  width: 75%;
+  width: 0%;
+  padding-left: 0px;
+  padding-right: 5px;
 }
 
 .styled input[type="range"] {
