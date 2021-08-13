@@ -4,6 +4,23 @@
   text-align: center;
 }
 
+.styled .list-group {
+  position: relative;
+}
+
+.styled #bet-size-percentage-fill {
+  position: absolute;
+  background: grey;
+  opacity: .15;
+  top: 40.42px;
+  left: .5px;
+  height: 40.42px;
+  max-width: 260.76px;
+  width: 66%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .styled input[type="range"] {
   width: 800px;
 }

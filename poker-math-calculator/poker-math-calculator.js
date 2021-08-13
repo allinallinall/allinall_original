@@ -5,11 +5,15 @@ let $calcButton = document.querySelector("#calc-button");
 let $betSize = document.querySelector("#bet-size-input-box");
 let $potSize = document.querySelector("#pot-size-input-box");
 let $betSizePercentageBox = document.querySelector("#bet-size-percentage-box");
+let $betSizePercentageFill = document.querySelector("#bet-size-percentage-fill");
 let $oddsBox = document.querySelector("#odds-box");
 let $equityRequiredBox = document.querySelector("#equity-required-box");
+let $equityRequiredPercentageFill = document.querySelector("#equity-required-percentage-fill");
 let $outsRequiredBox = document.querySelector("#outs-required-box");
 let $minDefenseFreqBox = document.querySelector("#min-defense-freq-box");
+let $minDefensePercentageFill = document.querySelector("#min-defense-percentage-fill");
 let $alphaAutoProfitBox = document.querySelector("#alpha-auto-profit-box");
+let $autoProfitPercentageFill = document.querySelector("#auto-profit-percentage-fill");
 let $betSlider = document.querySelector("#bet-slider");
 let $bet20 = document.querySelector("#b20");
 let $bet25 = document.querySelector("#b25");
@@ -22,6 +26,28 @@ let $bet100 = document.querySelector("#b100");
 
 function toPercentageDisplayFormat(number) {
   return number.toPrecision(3)+"%";
+}
+
+// changePercentageFilled("bet size", 25)
+function changePercentageFilled(type, percentage) {
+  /*
+
+  1) if statement logic with `type`
+  2) variables for dom elements
+  3) update dom elements
+  4) call function in event listener(s)
+
+  */
+
+  if (type === "bet size") {
+    $betSizePercentageFill.style.width = percentage + "%";
+  } else if (type === "equity required") {
+    $equityRequiredPercentageFill.style.width = percentage + "%";
+  } else if (type === "minimum defense frequency") {
+    $minDefensePercentageFill.style.width = percentage + "%";
+  } else if (type === "autoprofit") {
+    $autoProfitPercentageFill.style.width = percentage + "%";
+  }
 }
 
 function getEquityRequiredPercentage(betSizePercentage) {
@@ -97,6 +123,9 @@ $bet20.addEventListener("click", function () {
   $betSlider.value = 20;
 
   $betSizePercentageBox.innerHTML = $betSlider.value+"%";
+  changePercentageFilled("bet size",20);
+
+
   $oddsBox.innerHTML = (convertEquityToOdds(20));
 
   $equityRequiredBox.innerHTML = toPercentageDisplayFormat(getEquityRequiredPercentage(20));
