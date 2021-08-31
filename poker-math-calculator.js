@@ -64,6 +64,7 @@ function calculate() {
   let betSizePercentage = ((betSize/potSize)*100);
   let equityRequiredPercentage = getEquityRequiredPercentage(betSizePercentage);
   let minDefenseFreqPercentage = getMinDefenseFreq(betSizePercentage);
+  let outsRequired = 44*equityRequiredPercentage/100;
 
   $betSlider.value = betSizePercentage;
   $betSizePercentageBox.innerHTML = toPercentageDisplayFormat(betSizePercentage);
@@ -74,6 +75,8 @@ function calculate() {
   changePercentageFilled("minimum defense frequency",minDefenseFreqPercentage);
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-(minDefenseFreqPercentage));
   changePercentageFilled("auto profit", 100-minDefenseFreqPercentage);
+  $oddsBox.innerHTML = (convertEquityToOdds(betSizePercentage));
+  $outsRequiredBox.innerHTML = outsRequired.toPrecision(3);
 
 }
 
