@@ -30,7 +30,7 @@
 
 .styled #min-defense-percentage-fill {
   position: relative;
-  background: grey ;
+  background: orange;
   opacity: .60;
   max-width: 261px;
   width: 0%;
