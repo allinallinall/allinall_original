@@ -9,7 +9,35 @@
     <script src="poker-math-calculator.js" defer></script>
   </head>
   <body>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">&nbsp;</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">AiA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Thoughts</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="#">Tools</a>
+          <li class="nav-item dropdown">
+          <a class="nav-link" href="#">Visuals</a>
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
       <div class="container styled">
 
         <div class="input-group">
@@ -33,13 +61,13 @@
             <li id="equity-required-box" class="list-group-item">&nbsp;</li>
             <li id="equity-required-percentage-fill" class="list-group-item"></li>
           </ul>
-          <div class="card-header">Outs Required</div>
+          <div class="card-header">Outs (Turn to River PLO)</div>
           <li id="outs-required-box" class="list-group-item">&nbsp; </li>
           <li id="outs-required-percentage-fill" class="list-group-item"></li>
         </div>
         <div class="card">
           <ul class="list-group list-group-flush">
-            <div class="card-header">Minimum Defense Frequency</div>
+            <div class="card-header">Min Defense Frequency</div>
             <li id="min-defense-freq-box" class="list-group-item">&nbsp;</li>
             <li id="min-defense-percentage-fill" class="list-group-item"></li>
           </ul>

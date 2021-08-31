@@ -15,27 +15,27 @@
   max-width: 261px;
   width: 0%;
   padding-left: 0px;
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
 .styled #equity-required-percentage-fill {
   position: relative;
   background: lightgreen;
-  opacity: .80;
+  opacity: 1;
   max-width: 261px;
   width: 0%;
   padding-left: 0px;
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
 .styled #min-defense-percentage-fill {
   position: relative;
-  background: orange;
+  background: grey ;
   opacity: .60;
   max-width: 261px;
   width: 0%;
   padding-left: 0px;
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
 .styled #auto-profit-percentage-fill {
@@ -45,7 +45,7 @@
   max-width: 261px;
   width: 0%;
   padding-left: 0px;
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
 .styled input[type="range"] {

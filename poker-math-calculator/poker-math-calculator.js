@@ -73,6 +73,7 @@ function calculate() {
   $minDefenseFreqBox.innerHTML = toPercentageDisplayFormat(minDefenseFreqPercentage);
   changePercentageFilled("minimum defense frequency",minDefenseFreqPercentage);
   $alphaAutoProfitBox.innerHTML = toPercentageDisplayFormat(100-(minDefenseFreqPercentage));
+  changePercentageFilled("auto profit", 100-minDefenseFreqPercentage);
 
 }
 
