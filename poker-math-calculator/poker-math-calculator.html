@@ -11,7 +11,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">&nbsp;</a>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,15 +20,25 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Thoughts</a>
-        </li>
         <li class="nav-item dropdown">
-        <a class="nav-link" href="tools.html">Tools</a>
-          <li class="nav-item dropdown">
-          <a class="nav-link" href="">Visuals</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tools
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="poker-math-calculator/poker-math-calculator.html">Poker Math Calculator</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Implied Odds Calculator</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">4bet Pot Calculator</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">BetSize Stories</a></li>
+          </ul>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#">Visuals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Words</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -39,7 +49,6 @@
   </div>
 </nav>
       <div class="container styled">
-
         <div class="input-group">
           <input id="bet-size-input-box" type="number" placeholder= "Enter Bet Size" class="form-control">
           <input id="pot-size-input-box" type="number" placeholder= "Enter Pot Size" class="form-control">
