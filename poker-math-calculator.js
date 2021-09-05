@@ -43,11 +43,12 @@ function changePercentageFilled(type, percentage) {
 }
 
 function getEquityRequiredPercentage(betSizePercentage) {
-  return (betSizePercentage/(betSizePercentage+betSizePercentage+100)*100);
+let equityRequiredPercentage = (betSizePercentage/(betSizePercentage+betSizePercentage+100)*100);
+  return equityRequiredPercentage;
 }
 
 function convertEquityToOdds(betSize) {
-  return ((100 / betSize)-1).toPrecision(2) + " : 1";
+  return ((100 / getEquityRequiredPercentage(betSize))-1).toPrecision(3) + " : 1";
 }
 
 function getMinDefenseFreq(betSizePercentage) {
